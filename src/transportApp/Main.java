@@ -1,5 +1,6 @@
 package transportApp;
 
+import java.util.*;
 public class Main {
   public static void main(String[] args) {
     // Horse myHorse = new Horse("Chester");
@@ -19,8 +20,34 @@ public class Main {
     
     //will not work because abstract class cannot be called
     // Fish myFish = new Fish("Koi", "Orange", 1.5);
-    KoiFish myKoi = new KoiFish("Orange", 1.5);
-    System.out.println(myKoi);
-    myKoi.bePretty();
+
+    // KoiFish myKoi = new KoiFish("Orange", 1.5);
+    // System.out.println(myKoi);
+    // myKoi.bePretty();
+
+    //make new List, with this type ---> create new ArrayList with this type
+    List<KoiFish> fishList = new ArrayList<KoiFish>();
+    System.out.println(fishList.size());
+    fishList.add(new KoiFish("Orange", 1.5));
+    fishList.add(new KoiFish("Blue", 2.0));
+    fishList.add(new KoiFish("Green", 1.0));
+    
+    //will store reference in variable so you can directly remove if necessary
+    // KoiFish fakeFish = new KoiFish("Green", 1.0);
+    // fishList.add(fakeFish);
+    // System.out.println(fishList.size());
+    // fishList.remove(fakeFish);
+
+    // System.out.println(fishList.size());
+    // System.out.println(fishList);
+
+    // for (int i = 0; i < fishList.size(); i++) {
+    //   fishList.get(i).bePretty();
+    // }
+
+    //faster way to call custom objects in an array list, but lose out on index
+    for (KoiFish k : fishList) {
+      k.bePretty();
+    }
   }
 }
