@@ -17,6 +17,7 @@ public class Main {
         One way to get around is Class A > Class B > Class C
     */
     
+    //will not work because abstract class cannot be called
     // Fish myFish = new Fish("Koi", "Orange", 1.5);
     KoiFish myKoi = new KoiFish("Orange", 1.5);
     System.out.println(myKoi);
